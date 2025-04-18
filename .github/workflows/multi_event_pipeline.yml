@@ -25,7 +25,7 @@ jobs: # Define the jobs to be run in this workflow
     if: github.event_name == 'pull_request' # Condition to check if the event is a pull request
     runs-on: ubuntu-latest
     steps: # Steps to be executed in the job
-      - name: "multi_event_pipeline / workflow " #
+      - name: "multi_event_pipeline / workflow " #      
         run: echo "Running on Pull Request" # Print message to console
   on-pull_request_closed: # Job name
     if: github.event_name == 'pull_request' && github.event.action == 'closed' # Condition to check if the event is a pull request and closed
