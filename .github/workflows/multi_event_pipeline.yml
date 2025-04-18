@@ -1,0 +1,27 @@
+name: "Multi_event_pipeline / workflow " # This is a test workflow
+on:
+  push: # # Triggered on push to master or production branches
+    branches:
+      - master
+      - test
+
+  pull_request: # Triggered on pull request to master or production branches
+      branches:
+        - master
+  workflow_dispatch: # Allows manual triggering of the workflow 
+
+
+jobs: # Define the jobs to be run in this workflow
+  on-push: # Job name
+    if: github.event_name == 'push' # Condition to check if the event is a push
+    runs-on: ubuntu-latest
+    steps: # Steps to be executed in the job
+      - name: "multi_event_pipeline / workflow " #
+        run: echo "Running on Master/test Push" # Print message to console
+            
+  on-pull_request: # Job name
+    if: github.event_name == 'pull_request' # Condition to check if the event is a pull request
+    runs-on: ubuntu-latest
+    steps: # Steps to be executed in the job
+      - name: "multi_event_pipeline / workflow " #
+        run: echo "Running on Pull Request" # Print message to console
