@@ -3,7 +3,7 @@ on:
   push: # # Triggered on push to master or production branches
     branches:
       - master
-      - test
+      - newtest
 
   pull_request: # Triggered on pull request to master or production branches
       branches:
