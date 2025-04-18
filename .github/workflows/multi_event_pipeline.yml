@@ -25,3 +25,9 @@ jobs: # Define the jobs to be run in this workflow
     steps: # Steps to be executed in the job
       - name: "multi_event_pipeline / workflow " #
         run: echo "Running on Pull Request" # Print message to console
+  on-workflow_dispatch: # Job name
+    if: github.event_name == 'workflow_dispatch' # Condition to check if the event is a workflow dispatch
+    runs-on: ubuntu-latest
+    steps: # Steps to be executed in the job
+      - name: "multi_event_pipeline / workflow " #
+        run: echo "Running on Workflow Dispatch" # Print message to console     
