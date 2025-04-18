@@ -1,0 +1,13 @@
+name: "Multi_event_pipeline / workflow " # This is a test workflow
+on:
+  push: # # Triggered on push to master or production branches
+    branches:
+      - master
+
+jobs: # Define the jobs to be run in this workflow
+  hello-world: # Job name
+    runs-on: ubuntu-latest
+    steps: # Steps to be executed in the job
+      - name: "multi_event_pipeline / workflow " #
+        run: echo "Running on Master Push" # Print message to console
+            
