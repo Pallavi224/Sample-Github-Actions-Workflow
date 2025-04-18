@@ -3,6 +3,7 @@ on:
   push: # # Triggered on push to master or production branches
     branches:
       - master
+      - test
 
 jobs: # Define the jobs to be run in this workflow
   hello-world: # Job name
