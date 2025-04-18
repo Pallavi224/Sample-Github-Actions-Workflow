@@ -9,6 +9,7 @@ on:
       branches:
         - master
       types:
+        - opened # Only trigger on opened pull requests
         - closed # Only trigger on closed pull requests
   workflow_dispatch: # Allows manual triggering of the workflow 
  
