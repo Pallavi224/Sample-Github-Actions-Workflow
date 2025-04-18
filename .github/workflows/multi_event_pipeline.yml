@@ -8,6 +8,8 @@ on:
   pull_request: # Triggered on pull request to master or production branches
       branches:
         - master
+  workflow_dispatch: # Allows manual triggering of the workflow 
+
 
 jobs: # Define the jobs to be run in this workflow
   on-push: # Job name
