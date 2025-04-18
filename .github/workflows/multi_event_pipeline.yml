@@ -11,12 +11,14 @@ on:
 
 jobs: # Define the jobs to be run in this workflow
   on-push: # Job name
+    if: github.event_name == 'push' # Condition to check if the event is a push
     runs-on: ubuntu-latest
     steps: # Steps to be executed in the job
       - name: "multi_event_pipeline / workflow " #
         run: echo "Running on Master/test Push" # Print message to console
             
   on-pull_request: # Job name
+    if: github.event_name == 'pull_request' # Condition to check if the event is a pull request
     runs-on: ubuntu-latest
     steps: # Steps to be executed in the job
       - name: "multi_event_pipeline / workflow " #
